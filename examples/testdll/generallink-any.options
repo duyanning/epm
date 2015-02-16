@@ -1,0 +1,3 @@
+# this is an options file
+dll/debug/pm.so #link with pm.so
+

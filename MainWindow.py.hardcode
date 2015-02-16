@@ -1,0 +1,83 @@
+import pygtk
+pygtk.require('2.0')
+import gtk
+
+class MainWindow(gtk.Window):
+    def __init__(self):
+        gtk.Window.__init__(self, gtk.WINDOW_TOPLEVEL)
+        self.set_title("Easy Project Manager");
+        self.set_size_request(640, 480)
+
+        self.connect("destroy", self.destroy)
+        self.show()
+
+        mainMenu = self.createMainMenu()
+        vbox = gtk.VBox(False, 0)
+        self.add(vbox)
+        vbox.show()
+        vbox.pack_start(mainMenu, False, False, 2)
+
+    def createFileMenu(self):
+        fileMenu = gtk.Menu()
+
+        openItem = gtk.MenuItem("Open")
+        openItem.connect("activate", self.onFileOpen)
+        fileMenu.append(openItem)
+        openItem.show()
+
+        exitItem = gtk.MenuItem("Exit")
+        fileMenu.append(exitItem)
+        exitItem.show()
+
+        return fileMenu
+        
+    def createHelpMenu(self):
+        helpMenu = gtk.Menu()
+
+        aboutItem = gtk.MenuItem("About")
+        aboutItem.connect("activate", self.onHelpAbout)
+        helpMenu.append(aboutItem)
+        aboutItem.show()
+
+        return helpMenu
+
+    def createMainMenu(self):
+        mainMenu = gtk.MenuBar()
+
+        # File
+        fileItem = gtk.MenuItem("File")
+        fileMenu = self.createFileMenu()
+        fileItem.set_submenu(fileMenu)
+        mainMenu.append(fileItem)
+        fileItem.show()
+        
+        # Hlep
+        helpItem = gtk.MenuItem("Help")
+        helpMenu = self.createHelpMenu()
+        helpItem.set_submenu(helpMenu)
+        mainMenu.append(helpItem)
+        helpItem.show()
+
+        mainMenu.show()
+        return mainMenu
+
+
+    def destroy(self, widget, data=None):
+        gtk.main_quit()
+
+    def onFileOpen(self, widget, data=None):
+        print "onFileOpen"
+
+    def onHelpAbout(self, widget, data=None):
+        print "onHelpAbout"
+        aboutDlg = gtk.Dialog(flags=gtk.DIALOG_MODAL)
+
+        label = gtk.Label("author: duyanning")
+        label.show()
+        aboutDlg.vbox.pack_start(label, True, True, 0)
+
+        okBtn = gtk.Button("Ok")
+        okBtn.show()
+        aboutDlg.vbox.pack_start(okBtn, True, True, 0)
+
+        aboutDlg.show()

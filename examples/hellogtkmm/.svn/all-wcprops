@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm
+END
+generalcxx-debug.options
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm/generalcxx-debug.options
+END
+hellogtkmm.epmprj
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm/hellogtkmm.epmprj
+END
+SOURCEFILES
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm/SOURCEFILES
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm/main.cpp
+END
+generalcxx-release.options
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm/generalcxx-release.options
+END
+generallink-any.options
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/p/epm/code/!svn/ver/64/trunk/examples/hellogtkmm/generallink-any.options
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/p/epm/code/!svn/ver/104/trunk/examples/hello
+END
+f.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/p/epm/code/!svn/ver/63/trunk/examples/hello/f.h
+END
+g.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/p/epm/code/!svn/ver/63/trunk/examples/hello/g.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/63/trunk/examples/hello/Makefile
+END
+hello.epmprj
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/epm/code/!svn/ver/63/trunk/examples/hello/hello.epmprj
+END
+SOURCEFILES
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/epm/code/!svn/ver/63/trunk/examples/hello/SOURCEFILES
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/63/trunk/examples/hello/main.cpp
+END
+f.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/epm/code/!svn/ver/63/trunk/examples/hello/f.cpp
+END
+g.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/epm/code/!svn/ver/63/trunk/examples/hello/g.cpp
+END

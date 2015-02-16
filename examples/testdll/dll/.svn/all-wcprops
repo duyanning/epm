@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/epm/code/!svn/ver/63/trunk/examples/testdll/dll
+END
+minus.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/epm/code/!svn/ver/63/trunk/examples/testdll/dll/minus.cpp
+END
+pm.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/p/epm/code/!svn/ver/63/trunk/examples/testdll/dll/pm.h
+END
+SOURCEFILES
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/p/epm/code/!svn/ver/63/trunk/examples/testdll/dll/SOURCEFILES
+END
+plus.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/p/epm/code/!svn/ver/63/trunk/examples/testdll/dll/plus.cpp
+END
+pm.epmprj
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/p/epm/code/!svn/ver/63/trunk/examples/testdll/dll/pm.epmprj
+END

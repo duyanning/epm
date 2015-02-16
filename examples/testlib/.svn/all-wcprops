@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/p/epm/code/!svn/ver/63/trunk/examples/testlib
+END
+testlib.epmprj
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/p/epm/code/!svn/ver/63/trunk/examples/testlib/testlib.epmprj
+END
+SOURCEFILES
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/epm/code/!svn/ver/63/trunk/examples/testlib/SOURCEFILES
+END
+testlib.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/epm/code/!svn/ver/63/trunk/examples/testlib/testlib.cpp
+END
+generallink-any.options
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/p/epm/code/!svn/ver/63/trunk/examples/testlib/generallink-any.options
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/p/epm/code/!svn/ver/81/trunk/examples/cxx-c
+END
+foo.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/epm/code/!svn/ver/80/trunk/examples/cxx-c/foo.c
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/80/trunk/examples/cxx-c/main.cpp
+END
+foo.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/epm/code/!svn/ver/80/trunk/examples/cxx-c/foo.h
+END
+hello.epmprj
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/epm/code/!svn/ver/80/trunk/examples/cxx-c/hello.epmprj
+END
+SOURCEFILES
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/epm/code/!svn/ver/80/trunk/examples/cxx-c/SOURCEFILES
+END

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/p/epm/code/!svn/ver/67/trunk/examples/shuff
+END
+scaner.l
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/scaner.l
+END
+shuff.epmprj
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/epm/code/!svn/ver/67/trunk/examples/shuff/shuff.epmprj
+END
+Seq.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Seq.cpp
+END
+Number.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Number.cpp
+END
+TimesSeq.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/TimesSeq.cpp
+END
+Range.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Range.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Makefile
+END
+Seq.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Seq.h
+END
+Number.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Number.h
+END
+TimesSeq.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/TimesSeq.h
+END
+Range.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/Range.h
+END
+SOURCEFILES
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/p/epm/code/!svn/ver/67/trunk/examples/shuff/SOURCEFILES
+END
+CompoundSeq.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/CompoundSeq.h
+END
+shuff.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/shuff.cpp
+END
+parser.y
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/p/epm/code/!svn/ver/63/trunk/examples/shuff/parser.y
+END

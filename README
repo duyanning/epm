@@ -1,0 +1,63 @@
+To use epm, add the the directory where epm locates into your PATH. (~/.profile)
+
+1. COMMAND LINE
+
+epm new hello -t exe
+epm new hello
+    create a project named hello.epmprj
+
+epm new foo -t dll
+    create a project named foo.epmprj built to shared library foo.so
+
+epm new bar -t lib
+    create a project named bar.epmprj built to static library bar.a 
+
+epm add *.cpp
+    add all cpp files into the project
+
+epm add '*.cpp'
+    add all cpp files including these exist in future into the project
+
+epm remove main.cpp
+    remove main.cpp from the project
+
+epm setactiveconfig release
+    set current configuration to release rather than debug
+
+epm build
+    build the project
+
+epm build -v
+    -v means verbose mode saying more
+
+epm compile hello.cpp
+	only compile hello.cpp
+
+epm list
+    list the content of project
+
+epm
+    open the main window of epm
+
+
+2. OPTIONS FILE
+
+Options file controls the way to compile source file, to link.
+The name of options files have form:
+<name><tool>-<config>.options
+
+where:
+
+name
+  general
+  <filename>
+
+tool
+  cxx
+  link
+
+config
+  debug
+  release
+
+you can use $VAR in options file, just like in shell.

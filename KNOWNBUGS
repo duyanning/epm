@@ -1,0 +1,19 @@
+C++ source code should have .cpp suffix.
+================================================================
+$ g++ -MMD -MF aa -c ../MiniLogger.cpp -o debug/MiniLogger.o
+$ cat aa
+debug/MiniLogger.o: ../MiniLogger.cpp ../MiniLogger.h
+
+$ g++ -fpch-deps -MMD -MF aa -c ../MiniLogger.cpp -o debug/MiniLogger.o
+$ cat aa
+debug/MiniLogger.o: ../MiniLogger.cpp std.h MiniLogger.h ../MiniLogger.h
+
+MiniLogger.h should not be here!
+
+有MiniLogger.h，可能是因为std.h中也包含了MiniLogger.h
+这个std.h应为../std.h，而非./std.h，因为只有../std.h才包含了MiniLogger.h。
+但std.h前面为什么没有..？
+================================================================
+最终的exe文件依赖于源文件列表，但如果源文件列表采用了'*.cpp'的形式，将永远不会变化。
+这种情况下会发生问题。
+

@@ -1,0 +1,2 @@
+`pkg-config gtkmm-2.4 --cflags`
+-ggdb

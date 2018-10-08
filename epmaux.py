@@ -1,4 +1,6 @@
+# -*- coding: utf-8 -*-
 import glob
+import os
 import os.path
 from Project import *
 from Solution import *
@@ -11,11 +13,25 @@ def findSlnFile():
         return None
 
 def findPrjFile():
-    prjFilesList = glob.glob("*.epmprj")
-    if prjFilesList:
-        return os.path.abspath(prjFilesList[0])
-    else:
-        return None
+    lastCd = "";
+    cd = os.getcwd();
+    #while os.path.exists(cd):
+    while cd != lastCd:
+        print "finding .epmprj in " + cd + " ... ",
+        # 在当前目录下找epmprj文件
+        prjFilesList = glob.glob(os.path.join(cd, "*.epmprj"))
+        # print glob.glob(os.path.join(cd, "*.epmprj"))
+        # 如果找到就返回
+        if prjFilesList:
+            print "found."
+            os.chdir(cd)
+            return os.path.abspath(prjFilesList[0])
+        print ""                # 没找到也输出一个换行
+        lastCd = cd
+        # 否则就去父目录中找
+        cd = os.path.normpath(os.path.join(cd, os.pardir))
+
+    return None
 
 def findFile(pattern):
     prjFilesList = glob.glob(pattern)

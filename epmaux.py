@@ -4,6 +4,7 @@ import os
 import os.path
 from Project import *
 from Solution import *
+import settings
 
 def findSlnFile():
     slnFilesList = glob.glob("*.epmsln")
@@ -13,23 +14,28 @@ def findSlnFile():
         return None
 
 def findPrjFile():
-    lastCd = "";
+    topArrived = False
     cd = os.getcwd();
-    #while os.path.exists(cd):
-    while cd != lastCd:
-        print "finding .epmprj in " + cd + " ... ",
+    while not topArrived:
+        if settings.verbose:
+            print "finding .epmprj in " + cd + " ... ", 
         # 在当前目录下找epmprj文件
         prjFilesList = glob.glob(os.path.join(cd, "*.epmprj"))
         # print glob.glob(os.path.join(cd, "*.epmprj"))
         # 如果找到就返回
         if prjFilesList:
-            print "found."
+            if settings.verbose:
+                print "found." 
             os.chdir(cd)
             return os.path.abspath(prjFilesList[0])
-        print ""                # 没找到也输出一个换行
+        if settings.verbose:
+            print ""                # 没找到也输出一个换行
         lastCd = cd
         # 否则就去父目录中找
         cd = os.path.normpath(os.path.join(cd, os.pardir))
+
+        if (cd == lastCd):
+            topArrived = True
 
     return None
 
@@ -56,41 +62,41 @@ def list_prj_or_sln(name, isSln):
     else:
         list_sln(name)
 
-def build_solution(verbose):
+def build_solution():
     slnName = findSlnFile()
     if not slnName:
         print "cannot find a solution"
         return
     sln = Solution(slnName)
     sln.load()
-    sln.build(verbose)
+    sln.build()
 
-def build_project(verbose):
+def build_project():
     prjName = findPrjFile()
     if not prjName:
         print "cannot find a project"
         return
     prj = Project(prjName)
     prj.load()
-    return prj.build(verbose)
+    return prj.build()
 
-def build_gch(verbose):
+def build_gch():
     prjName = findPrjFile()
     if not prjName:
         print "cannot find a project"
         return
     prj = Project(prjName)
     prj.load()
-    prj.buildGch(verbose)
+    prj.buildGch()
 
-def compile_sourcefile(srcfile, verbose):
+def compile_sourcefile(srcfile):
     prjName = findPrjFile()
     if not prjName:
         print "cannot find a project"
         return
     prj = Project(prjName)
     prj.load()
-    return prj.compile(srcfile, verbose)
+    return prj.compile(srcfile)
 
 
 def set_active_config(name):

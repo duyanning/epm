@@ -17,7 +17,9 @@
   "epm build"
   (interactive)
   (save-some-buffers (not compilation-ask-about-save) nil)
-  (setq compilation-directory default-directory)
+  ;;(setq compilation-directory default-directory)
+  ;;(setq compilation-directory (epmacs-getprjname)) ; 不好使啊
+  (add-to-list 'compilation-search-path (epmacs-getprjname)) ; 用这个
 ;;   (compilation-start "epm build"))
   (compile "epm build"))
 

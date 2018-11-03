@@ -2,6 +2,7 @@
 # this moudle is used by epmacs.el
 
 import glob
+import os
 import epmaux
 from Project import *
 
@@ -24,6 +25,13 @@ def getexename():
     exeName = prj.dirName() + "/debug/" + prj.exeName()
     return exeName
 
+def getprjname():
+    prjName = epmaux.findPrjFile()
+    # return "/home/duyanning/hello"
+    # print "aaaaaaaaaaa: " + prjName
+    if not prjName:
+        return os.getcwd()
+    return os.path.dirname(prjName)
 
 
 def setactiveconfig(configname):

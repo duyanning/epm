@@ -19,7 +19,7 @@
   (save-some-buffers (not compilation-ask-about-save) nil)
   ;;(setq compilation-directory default-directory)
   ;;(setq compilation-directory (epmacs-getprjname)) ; 不好使啊
-  (add-to-list 'compilation-search-path (epmacs-getprjname)) ; 用这个
+  (add-to-list 'compilation-search-path (epmacs-getprjname)) ; // https://emacs.stackexchange.com/questions/3895/changing-the-compilation-mode-current-directory-automatically
 ;;   (compilation-start "epm build"))
   (compile "epm build"))
 

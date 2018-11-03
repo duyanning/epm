@@ -14,7 +14,8 @@ from Yacc2CppAction import *
 from UpdateDependencyGraphAction import *
 
 from Configuration import *
-
+# from settings import verbose
+import settings
 
 class Project:
     def __init__(self, path):
@@ -203,7 +204,8 @@ class Project:
     def outputPath(self):
         return self.m_outputPath
 
-    def compile(self, src_path, verbose):
+    def compile(self, src_path):
+        #global verbose
         outputDir = self.activeConfig()
         if not os.path.exists(outputDir):
             os.mkdir(outputDir)
@@ -245,13 +247,13 @@ class Project:
             dep = FileEntity(dep_path, dep_path)
             obj_update.addPrerequisite(dep)
 
-        self.buildGch(verbose)
+        self.buildGch()
 
-        if verbose:
+        if settings.verbose:
             update_dependency.show()
         update_dependency.update()
 
-        if verbose:
+        if settings.verbose:
             obj.show()
         obj.update()
 
@@ -261,7 +263,8 @@ class Project:
             return 1
 
 
-    def build(self, verbose):
+    def build(self):
+        #global verbose
         outputDir = self.activeConfig()
         if not os.path.exists(outputDir):
             os.mkdir(outputDir)
@@ -322,13 +325,13 @@ class Project:
         exe.addPrerequisite(srcListFile)
 
 
-        self.buildGch(verbose)
-
-        if verbose:
+        self.buildGch()
+        #print settings.verbose
+        if settings.verbose:
             update_dependency.show()
         update_dependency.update()
 
-        if verbose:
+        if settings.verbose:
             exe.show()
         exe.update()
 
@@ -337,7 +340,8 @@ class Project:
         else:
             return 1
 
-    def buildGch(self, verbose):
+    def buildGch(self):
+        #global verbose
         if not os.path.exists("PRECOMPILEDHEADERS"):
             return
 			
@@ -387,10 +391,10 @@ class Project:
                 dep = FileEntity(dep_path, dep_path)
                 gch_update.addPrerequisite(dep)
 
-        if verbose:
+        if settings.verbose:
             update_dependency.show()
         update_dependency.update()
 
-        if verbose:
+        if settings.verbose:
             all_gch.show()
         all_gch.update()

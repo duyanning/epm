@@ -5,9 +5,12 @@ sys.path += ["usr/lib/epm"]
 
 from optparse import OptionParser
 from epmaux import *
-
+import settings
 
 def main():
+    # global options
+    # global verbose
+    
     cmd = ""
     if len(sys.argv) >= 2:
         cmd = sys.argv[1]
@@ -25,13 +28,17 @@ def main():
 
     (options, args) = parser.parse_args(sys.argv[2:])
 
+    settings.verbose = options.verbose
+    #print settings.verbose
+    # print verbose
+
 
     if cmd == "buildsolution" or cmd == "buildsln" or cmd == "bs":
-        build_solution(options.verbose)
+        build_solution()
     elif cmd == "buildproject" or cmd == "buildprj" or cmd == "bp" or cmd == "build" or cmd == "b":
-        return build_project(options.verbose)
+        return build_project()
     elif cmd == "compile" or cmd == "c":
-        return compile_sourcefile(args[0], options.verbose)
+        return compile_sourcefile(args[0])
     elif cmd == "add":
         add_source(args)
     elif cmd == "delete" or cmd == "del" or cmd == "remove" or cmd == "rm":
@@ -49,7 +56,7 @@ def main():
     elif cmd == "setactiveconfig":
         set_active_config(args[0])
     elif cmd == "buildgch" or cmd == "pch" or cmd == "gch":
-        build_gch(options.verbose)
+        build_gch()
     elif cmd == "addpch":
         add_pch(args)
     elif cmd == "rmpch" or cmd == "delpch" or cmd == "removepch":

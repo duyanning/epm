@@ -4,6 +4,7 @@ from PhonyEntity import *
 from FileEntity import *
 
 from Project import *
+import settings
 
 class Solution:
     def __init__(self, path):
@@ -61,20 +62,21 @@ class Solution:
                 return True
         return False
 
-    def build(self, verbose):
+    def build(self):
+        #global verbose
         # todo: projects dependences
         sln_absdir = os.path.dirname(self.m_path)
         for prj_relpath in self.m_projectFilesPathList:
             prj_abspath = os.path.abspath(prj_relpath)
             prj_reldir = os.path.dirname(prj_relpath)
             prj_absdir = os.path.dirname(prj_abspath)
-            if verbose:
+            if settings.verbose:
                 print "Entering directory " + prj_absdir
             os.chdir(prj_absdir)
             prj = Project(prj_abspath)
             prj.load()
-            prj.build(verbose)
-            if verbose:
+            prj.build()
+            if settings.verbose:
                 print "Leaving directory " + prj_absdir
             os.chdir(sln_absdir)
 
